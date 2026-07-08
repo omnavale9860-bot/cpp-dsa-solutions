@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class solution {
+    public:
+    vector<int> buildPrefixTotals(vector<int>& values, int n) {
+        for(int i = 1 ; i<n;i++){
+            values[i]= values[i-1]+ values[i]; #core code logic of the prifix sum  
+        }
+        return values ; 
+        
+    }
+}; 

@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class solution {
+public:
+    vector<string> generateTitlePrefixes(string title) {
+       vector<string>word ; 
+       string temp ; 
+       for(char ch : title ){
+           temp += ch ; 
+           word.push_back(temp);
+       }
+       return word ; 
+       
+        
+    }
+};

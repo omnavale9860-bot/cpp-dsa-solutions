@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class solution {
+public:
+    int bestFixedWindowSum(vector<int>& values, int k) {
+        int maximumSum = INT_MIN;
+
+        for (int i = 0; i + k <= values.size(); i++) {
+            int sum = 0;
+            for (int j = i; j < i + k; j++) {
+                sum += values[j];
+            }
+            maximumSum = max(maximumSum, sum);
+        }
+        return maximumSum;
+    }
+};

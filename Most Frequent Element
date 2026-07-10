@@ -1,0 +1,23 @@
+Most Frequent Element
+Frequency Counting with Hash Map
+
+####
+#include <bits/stdc++.h>
+using namespace std;
+
+class solution{
+    public:
+    int mostFrequentElement(int n, vector<int>& nums) {
+        unordered_map<int,int> freq ; 
+        int maxfreq = nums[0] ; 
+        int ans = 0 ; 
+        for(int  i = 0 ; i < n ; i++){
+            freq[nums[i]]++ ; 
+            if(freq[nums[i]]<maxfreq){
+                maxfreq = freq[nums[i]];
+                ans = nums[i];
+            }
+        }
+        return ans ;
+    }
+};
